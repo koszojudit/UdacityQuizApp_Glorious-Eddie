@@ -15,8 +15,6 @@ import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static com.example.android.a4_glorious_quiz.R.id.winner_textview;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -85,89 +83,39 @@ public class MainActivity extends AppCompatActivity {
     protected void declareWinner(int score) {
 
         LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-
+        View winnerView;
         if (score <= 1) {
-            View winnerView = inflater.inflate(R.layout.winner_popup01, null);
-            final PopupWindow mPopupWindow = new PopupWindow(
-                    winnerView,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT
-            );
-
-            if (Build.VERSION.SDK_INT >= 21) {
-                mPopupWindow.setElevation(6.0f);
-            }
-
-            Button resetButton = (Button) winnerView.findViewById(R.id.dismiss);
-            resetButton.setOnClickListener(new View.OnClickListener() {
-                                               @Override
-                                               public void onClick(View view) {
-                                                   mPopupWindow.dismiss();
-                                                   resetApp(view);
-                                               }
-                                           }
-            );
-
-            TextView winnerScore = (TextView) winnerView.findViewById(R.id.winner_scoreview);
-            String result = "You answered " + score + " of 5 questions.";
-            winnerScore.setText(result);
-
-            mPopupWindow.showAtLocation(findViewById(R.id.activity_main), Gravity.BOTTOM, 0, 0);
-
+            winnerView = inflater.inflate(R.layout.winner_popup01, null);
         } else if (score <= 3) {
-            View winnerView = inflater.inflate(R.layout.winner_popup23, null);
-            final PopupWindow mPopupWindow = new PopupWindow(
-                    winnerView,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT
-            );
-
-            if (Build.VERSION.SDK_INT >= 21) {
-                mPopupWindow.setElevation(6.0f);
-            }
-
-            Button resetButton = (Button) winnerView.findViewById(R.id.dismiss);
-            resetButton.setOnClickListener(new View.OnClickListener() {
-                                               @Override
-                                               public void onClick(View view) {
-                                                   mPopupWindow.dismiss();
-                                                   resetApp(view);
-                                               }
-                                           }
-            );
-            TextView winnerScore = (TextView) winnerView.findViewById(R.id.winner_scoreview);
-            String result = "You answered " + score + " of 5 questions.";
-            winnerScore.setText(result);
-
-            mPopupWindow.showAtLocation(findViewById(R.id.activity_main), Gravity.BOTTOM, 0, 0);
-
+            winnerView = inflater.inflate(R.layout.winner_popup23, null);
         } else {
-            View winnerView = inflater.inflate(R.layout.winner_popup45, null);
-            final PopupWindow mPopupWindow = new PopupWindow(
-                    winnerView,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT
-            );
-
-            if (Build.VERSION.SDK_INT >= 21) {
-                mPopupWindow.setElevation(6.0f);
-            }
-
-            Button resetButton = (Button) winnerView.findViewById(R.id.dismiss);
-            resetButton.setOnClickListener(new View.OnClickListener() {
-                                               @Override
-                                               public void onClick(View view) {
-                                                   mPopupWindow.dismiss();
-                                                   resetApp(view);
-                                               }
-                                           }
-            );
-            TextView winnerScore = (TextView) winnerView.findViewById(R.id.winner_scoreview);
-            String result = "You answered " + score + " of 5 questions.";
-            winnerScore.setText(result);
-
-            mPopupWindow.showAtLocation(findViewById(R.id.activity_main), Gravity.BOTTOM, 0, 0);
+            winnerView = inflater.inflate(R.layout.winner_popup45, null);
         }
+        final PopupWindow mPopupWindow = new PopupWindow(
+                winnerView,
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            mPopupWindow.setElevation(6.0f);
+        }
+
+        Button resetButton = (Button) winnerView.findViewById(R.id.dismiss);
+        resetButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               mPopupWindow.dismiss();
+                                               resetApp(view);
+                                           }
+                                       }
+        );
+
+        TextView winnerScore = (TextView) winnerView.findViewById(R.id.winner_scoreview);
+        String result = "You answered " + score + " of 5 questions.";
+        winnerScore.setText(result);
+
+        mPopupWindow.showAtLocation(findViewById(R.id.activity_main), Gravity.BOTTOM, 0, 0);
     }
 
     //resets app, set all variables and views to initial state
