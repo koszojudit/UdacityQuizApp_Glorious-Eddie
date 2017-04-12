@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">#4_Glorious_Quiz</string>
+    <string name="start_title">Glorious Quiz</string>
+    <string name="start_subtitle">A tribute to Eddie Izzard</string>
+    <string name="start_description">This little quiz helps you remember big moments of Eddie Izzard, iconic figure of British stand-up comedy. If you haven’t seen his shows, the quiz might be even more fun. Have a glorious day!</string>
+    <string name="start_scroll">Scroll down to continue</string>
+    <string name="intro_title">Introduce yourself to Eddie&#8230;</string>
+    <string name="intro_question">Hi Eddie, I am</string>
+    <string name="intro_hint">(your name)</string>
+    <string name="intro_final">And let us start!</string>
+
+    <string name="q1_title">#1 Deadline project</string>
+    <string name="q1_desc">Whose heart was apparently made of stone in the rush of the 7th day of creation?</string>
+    <string name="q1_hint">Type her name here</string>
+
+    <string name="q2_title">#2 Dinosaurs</string>
+    <string name="q2_desc">What did dinosaurs miss to achieve proper world domination?</string>
+    <string name="answer2_poetry">Poetry</string>
+    <string name="answer2_sandwiches">Sandwiches</string>
+    <string name="answer2_publicSpeeches">Public speeches</string>
+    <string name="answer2_all">All of the above</string>
+
+    <string name="q3_title">#3 Metaphysics</string>
+    <string name="q3_desc">What can we conclude from dinosaurs ruling the world with such an attitude for millions of years?</string>
+    <string name="answer3_humor">God has a sense of humour, too.</string>
+    <string name="answer3_inscrutable">The ways of God are inscrutable.</string>
+    <string name="answer3_noGod">There’s no God making this.</string>
+
+    <string name="q4_title">#4 The flood</string>
+    <string name="q4_desc">And God said: &quot;I will kill everything. Except the &#8230;&quot;</string>
+    <string name="answer4_swim">&quot;&#8230; swimming ones&quot;</string>
+    <string name="answer4_run">&quot;&#8230; running ones&quot;</string>
+    <string name="answer4_fly">&quot;&#8230; flying ones&quot;</string>
+    <string name="answer4_float">&quot;&#8230; floating ones&quot;</string>
+
+    <string name="q5_title">#5 In memoriam</string>
+    <string name="q5_desc">What were the last words of Julius Caesar? &quot;Remember me as…&quot;</string>
+    <string name="answer5_emperor">&quot;&#8230; Emperor Fabulous.&quot;</string>
+    <string name="answer5_salad">&quot;&#8230; a salad.&quot;</string>
+    <string name="answer5_brute">&quot;Et tu, mi fili, Brute?&quot;</string>
+
+    <string name="button_text_restart">Restart</string>
+    <string name="button_text_submit">Submit</string>
+    <string name="button_text_tryAgain">Try again</string>
+
+    <string name="your_score1">Your answered</string>
+    <string name="your_score2"> questions out of 5.</string>
+
+    <string name="winner_text01_title">Hmmm&#8230;</string>
+    <string name="winner_text01">You probably have not seen any of my shows, have you?</string>
+
+    <string name="winner_text23_title">Maybe&#8230;</string>
+    <string name="winner_text23">&#8230;you should watch some episodes again on Youtube.</string>
+
+    <string name="winner_text45_title">You rock!</string>
+    <string name="winner_text45">That is the spirit - and an impressive memory of yours.</string>
+
+</resources>
