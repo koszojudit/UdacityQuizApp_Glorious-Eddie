@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String playerName = "Hey";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitAnswers(View view) {
         int score = 0;
+
+        // Introduction - Save player name
+        EditText enterName = (EditText) findViewById(R.id.myName);
+        String myName = enterName.getText().toString();
+        playerName = (myName.isEmpty())? "Hey" : myName;
 
         // Question 1 - EditText
         EditText enterAnswer = (EditText) findViewById(R.id.herName);
@@ -112,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         TextView winnerScore = (TextView) winnerView.findViewById(R.id.winner_scoreview);
-        String result = "You answered " + score + " of 5 questions.";
+        String result = playerName + ", you answered " + score + " of 5 questions.";
         winnerScore.setText(result);
 
         mPopupWindow.showAtLocation(findViewById(R.id.activity_main), Gravity.BOTTOM, 0, 0);
